@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sami Al-Jabar</title>
+	
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="js/respond.js"></script>
+	
+
+	
+	
+	<!----------- Custom Style ----------->
+	<style>
+	body {
+		font-family: 'Oswald';
+		background-color: #e5e5e5;
+	}
+	
+	
+	@media (max-width: 920px) {
+		.navbar-header {
+			float: none;
+		}
+		.navbar-toggle {
+			display: block;
+		}
+		.navbar-collapse.collapse {
+			display: none !important;
+		}
+		.collapse.in{
+			display:block !important;
+		}
+	}
+
+	.navbar .nav li a {
+		color: white;
+		transition-duration: 0.2s;
+		font-size: 15pt;
+		padding-right: 20pt;
+	}
+	
+	.navbar .nav li a:hover {
+		color: black;
+		background-color: #ffea00;
+		-webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+	}
+	
+	.navbar { margin-bottom:0px !important; }
+	
+	.content-row ul li p {
+		color: black;
+	}
+	
+	#skillIcons{
+		padding:0;
+		margin:0;
+    }
+	
+	#about { 
+		/* The image used */
+		background-image: url('image/code.jpg');
+
+		/* Set a specific height */
+		height: 100%; 
+		min-height: 100vh;
+		position: relative;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	#education { 
+		/* The image used */
+		background-image: url('image/education.jpg');
+
+		/* Set a specific height */
+		height: 100%; 
+		min-height: 100vh;
+		position: relative;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	#skills { 
+		/* The image used */
+		background-image: url('image/blackback.jpg');
+
+		/* Set a specific height */
+		height: 100%;
+		min-height: 100vh;
+		padding-top:8%;
+		padding-bottom:8%;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	#skills > .container > .list-inline p {
+		font-size: 18px;
+	}
+	
+	#skills > .container {
+		background: rgba(0, 0, 0, 0.8); 
+		text-align: center;
+	}
+	
+	
+	#about > .container > .jumbotron {
+	   background: rgba(0, 0, 0, 0.9); 
+	   position: absolute;
+	   left: 35%;
+	   top: 50%;
+	   transform: translate(-27%, -50%);
+	}
+	
+	#education > .container > .jumbotron {
+	   background: rgba(0, 0, 0, 0.9); 
+	   position: absolute;
+	   left: 35%;
+	   top: 50%;
+	   transform: translate(-27%, -50%);
+	}
+	
+	
+	
+	@media (max-width: 914px) {
+		.jumbotron h1 {
+			font-size: 35px;
+		}
+		
+		.jumbotron p {
+			font-size: 17px;
+		}
+	}
+	
+	@media (max-width: 380px) {
+		.jumbotron h1 {
+			font-size: 25px;
+		}
+		
+		.jumbotron p {
+			font-size: 12px;
+		}
+	}
+	
+	#textColor {
+		color: #fff7a2;
+	}
+	
+	
+	</style>
+</head>
+
+<body>
+<!-- NAVBAR -->
+	<nav style="background-color: #181818" class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span style="background-color:#ffea00" class="icon-bar"></span>
+					<span style="background-color:#ffea00" class="icon-bar"></span>
+					<span style="background-color:#ffea00" class="icon-bar"></span>                        
+				</button>
+				<a style="padding-left:25pt" class="navbar-brand" href="#">
+					<img style="max-width:150px;" src="image/logo.png">
+				</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" style="text-align:center" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about">About</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Other Works</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> <!-- Navbar -->
+
+	
+<!-- Big Image -->
+	<div>
+		<img class="img-responsive"  style="width:100%;" src="image/jumbo.png">
+	</div> 
+		
+		
+		
+		
+<!-- Skill Icons -->
+<div class="row" id="skillIcons">
+	<div class="content-row" style="padding-top:7%; padding-bottom:20%;">
+		<ul class="list-inline">
+			<!-- <li class="col-md-1 col-sm-2 col-xs-2"></li> -->
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/softwareicon.png">
+				<p class="lead" style="padding-top:5%"><strong>Software<Br/>Developer</strong></p>
+			</li>
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/websiteicon.png">
+				<p class="lead" style="padding-top:5%"><strong>Website<Br/>Developer</strong></p>
+			</li>
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/brainicons.png">
+				<p class="lead" style="padding-top:5%"><strong>Quick<Br/>Learner</strong></p>
+			</li>
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/skillicons.png">
+				<p class="lead" style="padding-top:5%"><strong>Problem<Br/>Solver</strong></p>
+			</li>
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/painticons.png">
+				<p class="lead" style="padding-top:5%"><strong>Graphic<Br/>Designer</strong></p>
+			</li>
+			
+			<li class="col-md-2 col-sm-4 col-xs-4 text-center">
+				<img style="width:45%" src="image/gameicons.png">
+				<p class="lead" style="padding-top:5%"><strong>Game<Br/>Developer</strong></p>
+			</li>
+			
+			<!-- <li class="col-md-1 col-sm-2 col-xs-2"></li> -->
+		</ul>
+	</div>	
+</div>
+	
+	
+	
+	
+<!-- Profile Section -->
+<div class="page-header">
+  <h1 class="text-center" style="color:black"></h1>
+</div> 
+<div  class="parallax" id="about">
+	<div class="container" style="padding-top:0%; padding-bottom:0%">
+		<div class="jumbotron">
+			<h1 class="text-center" style="color:#ffea00">Hi, This is Sami Al-Jabar</h1>
+			<p class="text-justify" style="color:white">
+			I love technology and love to experiment with new things with an aim to develop and design something beneficial and creative.
+			This aim has inspired me learn about new skills such as developing and designing Desktop and Android Applications, Websites using Bootstrap,
+			Graphic Designing and also developing Games in Unity3D using C#. I have good knowledge about user-friendly UI/UX development
+			for softwares and websites which I gained mostly from the topic "Human Computer Interaction" (HCI) and personal experience.<br/><br/>
+			Having a Computer Science background, I look forward to learn more and more about new technology and ready to face all kinds of
+			challenges with a view to establishing myself as someone with excellent creativity and professional skills which I would love to implement
+			in real life for making this earth a much better place.
+			</p>
+		</div>
+	</div>
+</div>	
+
+
+
+
+<!-- Skills Section -->
+<div class="page-header" style="padding-top:5%;" id="skill">
+  <h1 class="text-center" style="color:black">SKILLS</h1>
+</div> 
+
+<div class="parallax" id="skills">
+	<div class="container">
+		<div class="list-inline text-center">
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Software Developer</h2>
+					<p style="color:white">
+						Developing softwares using <span id="textColor">C#</span><br/>and <span id="textColor">Java</span> along with MySql.<br/>Few <span class="textColor">Android Applications</span> developed<br/>using Java and XML in <span class="textColor">Android Studio(IDE)</span>.<br/>Ready to learn new languages in order to<br/>develop new softwares according to the trend.
+					</p>
+				</div>
+			</li>
+			
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12" >
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Website Developer</h2>
+					<p style="color:white">
+						Designing and Developing responsive<br/>websites using <span id="textColor">HTML, CSS, PHP, JAVASCRIPT, MySql</span><br/>and also using <span id="textColor">Bootstrap Framework.</span><br/>Ready to learn new scripting<br/>language or Framework in<br/>order to develope new websites.
+					</p>
+				</div>
+			</li>
+			
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Quick Learner</h2>
+					<p style="color:white">
+						I have the ability to learn<br/>any new technology, language, framework,<br/>software etc really quick since I love<br/>learning new things all the time. I look<br/>forward for challenges and want to win each<br/>and every one of them in order to proceed towards the success.
+					</p>
+				</div>
+			</li>
+			
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12" >
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Problem Solver</h2>
+					<p style="color:white">
+						Solving ad-hoc problems using <span id="textColor">C</span> and <span id="textColor">C++,</span><br/>I solved 75 problems on UVA online Judge and few of<br/>them in LightOJ. I have taken part in some<br/>contests too. I have knowledge on Data-Mining<br/>and Natural Language Processing which were a significant<br/>part of my Thesis resaearch.
+					</p>
+				</div>
+			</li>
+			
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12" >
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Graphic Designer</h2>
+					<p style="color:white">
+						Great experience of designing<br/>with <span id="textColor">Adobe Photoshop</span> and <span id="textColor">Illustrator.</span><br/>I am a freelancer at Fiverr.com where I do Graphic<br/>Design works. I have good knowledge about<br/>developing user-friendly UI/UX for<br/>softwares and websites.
+					</p>
+				</div>
+			</li>
+			
+			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12" >
+				<div style="padding:1%">
+					<h2 style="color:#ffea00" >Game Developer</h2>
+					<p style="color:white">
+						Developed a few games<br/>using C# in <span id="textColor">Unity3D Game Engine.</span><br/>I have also worked with animations using <span id="textColor">Blender.</span><br/>Game developement is kind of like my hobby.<br/>Currently my main focus is developing games for<br/>Android Application.
+					</p>
+				</div>
+			</li>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Education -->
+<div class="page-header" style="padding-top:5%">
+  <h1 class="text-center" style="color:black">EDUCATION</h1>
+</div> 
+
+<div class="parallax" id="education">
+<div class="container" style="padding-top:0%">
+	<div class="jumbotron" >
+		<h3 class="text-center" style="color:#ffea00"><b>Undergraduate (2014-2017)</b></h3>
+		<p class="text-center" style="color:white">
+			Studying Computer Science and Engineering in <u>American International University-Bangladesh</u> (10th Semester).
+		</p>
+		
+		<h3 class="text-center" style="color:#ffea00"><b>Higher Secondary Certificate (2011-2013)</b></h3>
+		<p class="text-center" style="color:white">
+			Got GPA 5.0 (A+) on a scale of 5.0 from <u>Notre Dame College</u> in English version.
+		</p>
+		
+		<h3 class="text-center" style="color:#ffea00"><b>Secondary School Certificate (2009-2011)<b/></h3>
+		<p class="text-center" style="color:white">
+			Got GPA 5.0 (A+) on a scale of 5.0 from <u>Foundation School</u> in English version.
+		</p>
+	</div>
+</div>
+</div>
+	
+	
+	
+	
+<!-- Contact -->
+<div class="page-header" style="padding-top:2%">
+  <h1 class="text-center" style="color:black">CONTACT</h1>
+</div>
+
+
+
+
+	
+	<!-- javascript -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+</body>
+
+</html>
