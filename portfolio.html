@@ -18,24 +18,8 @@
 	<!----------- Custom Style ----------->
 	<style>
 	body {
-		font-family: Oswald;
-		background-color: white;
-	}
-	
-	
-	@media (max-width: 920px) {
-		.navbar-header {
-			float: none;
-		}
-		.navbar-toggle {
-			display: block;
-		}
-		.navbar-collapse.collapse {
-			display: none !important;
-		}
-		.collapse.in{
-			display:block !important;
-		}
+		font-family: 'Oswald';
+		background-color: #111111;
 	}
 
 	.navbar .nav li a {
@@ -56,7 +40,7 @@
 	.navbar { margin-bottom:0px !important; }
 	
 	.content-row ul li p {
-		color: black;
+		color: white;
 	}
 	
 	#skillIcons{
@@ -96,6 +80,22 @@
 		background-size: cover;
 	}
 	
+	#other { 
+		/* The image used */
+		background-image: url('blackback.jpg');
+
+		/* Set a specific height */
+		height: 100%; 
+		min-height: 100vh;
+		position: relative;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
 	#skills { 
 		/* The image used */
 		background-image: url('blackback.jpg');
@@ -105,6 +105,7 @@
 		min-height: 100vh;
 		padding-top:8%;
 		padding-bottom:8%;
+		position: relative;
 
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;
@@ -134,26 +135,51 @@
 	#education > .container > .jumbotron {
 	   background: rgba(0, 0, 0, 0.9); 
 	   position: absolute;
-	   left: 35%;
+	   left: 50%;
 	   top: 50%;
-	   transform: translate(-27%, -50%);
+	   padding-top:0%;
+	   padding-bottom:0%;
+	   transform: translate(-50%, -50%);
 	}
 	
+	#other > .container > .jumbotron {
+	   background: rgba(0, 0, 0, 0.9); 
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   padding-top:0%;
+	   padding-bottom:0%;
+	   transform: translate(-50%, -50%);
+	}
 	
+	@media (max-width: 920px) {
+		.navbar-header {
+			float: none;
+		}
+		.navbar-toggle {
+			display: block;
+		}
+		.navbar-collapse.collapse {
+			display: none !important;
+		}
+		.collapse.in{
+			display:block !important;
+		}
+	}
 	
 	@media (max-width: 914px) {
-		.jumbotron h1 {
-			font-size: 35px;
+		.jumbotron h1, h3 {
+			font-size: 25px;
 		}
 		
 		.jumbotron p {
-			font-size: 17px;
+			font-size: 14px;
 		}
 	}
 	
-	@media (max-width: 380px) {
-		.jumbotron h1 {
-			font-size: 25px;
+	@media (max-width: 680px) {
+		.jumbotron h1, h3 {
+			font-size: 18px;
 		}
 		
 		.jumbotron p {
@@ -164,6 +190,8 @@
 	#textColor {
 		color: #fff7a2;
 	}
+	
+	
 	
 	
 	</style>
@@ -187,11 +215,11 @@
 			<div class="collapse navbar-collapse" style="text-align:center" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#about">About</a></li>
-					<li><a href="#education">Education</a></li>
 					<li><a href="#skills">Skills</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Other Works</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#otherworks">Other Works</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -208,7 +236,7 @@
 		
 <!-- Skill Icons -->
 <div class="row" id="skillIcons">
-	<div class="content-row" style="padding-top:7%; padding-bottom:20%;">
+	<div class="content-row" style="padding-top:7%; padding-bottom:15%;">
 		<ul class="list-inline">
 			<!-- <li class="col-md-1 col-sm-2 col-xs-2"></li> -->
 			
@@ -249,7 +277,6 @@
 	
 	
 	
-	
 <!-- Profile Section -->
 <div class="page-header">
   <h1 class="text-center" style="color:black"></h1>
@@ -264,8 +291,8 @@
 			Graphic Designing and also developing Games in Unity3D using C#. I have good knowledge about user-friendly UI/UX development
 			for softwares and websites which I gained mostly from the topic "Human Computer Interaction" (HCI) and personal experience.<br/><br/>
 			Having a Computer Science background, I look forward to learn more and more about new technology and ready to face all kinds of
-			challenges with a view to establishing myself as someone with excellent creativity and professional skills which I would love to implement
-			in real life for making this world a much better place.
+			challenges with a view to establishing myself as someone with excellent creativity, professional skills and leadership abilities which I
+			would love to implement in real life for making this world a much better place.
 			</p>
 		</div>
 	</div>
@@ -275,8 +302,9 @@
 
 
 <!-- Skills Section -->
-<div class="page-header" style="padding-top:5%;" id="skill">
-  <h1 class="text-center" style="color:black">SKILLS</h1>
+<div class="page-header text-center" style="padding-top:0%; padding-bottom: 0%" id="skill">
+  <!-- <h1 class="text-center" style="color:white">SKILLS</h1> -->
+  <img src="skillstitle.png" style="width:250px;"></img>
 </div> 
 
 <div class="parallax" id="skills">
@@ -285,7 +313,7 @@
 			<li class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 				<div style="padding:1%">
 					<h2 style="color:#ffea00" >Software Developer</h2>
-					<p style="color:white">
+					<p id="p1" style="color:white">
 						Developing softwares using <span id="textColor">C#</span><br/>and <span id="textColor">Java</span> along with MySql.<br/>Few <span class="textColor">Android Applications</span> developed<br/>using Java and XML in <span class="textColor">Android Studio(IDE)</span>.<br/>Ready to learn new languages in order to<br/>develop new softwares according to the trend.
 					</p>
 				</div>
@@ -313,7 +341,7 @@
 				<div style="padding:1%">
 					<h2 style="color:#ffea00" >Problem Solver</h2>
 					<p style="color:white">
-						Solving ad-hoc problems using <span id="textColor">C</span> and <span id="textColor">C++,</span><br/>I solved 75 problems on UVA online Judge and few of<br/>them in LightOJ. I have taken part in some<br/>contests too. I have knowledge on Data-Mining<br/>and Natural Language Processing which were a significant<br/>part of my Thesis resaearch.
+						Solving ad-hoc problems using <span id="textColor">C</span> and <span id="textColor">C++,</span><br/>I have solved 75 problems on <a href="http://uhunt.felix-halim.net/id/684954" target="_blank">UVA online Judge</a> and few<br/>of them in LightOJ. I have taken part in some<br/>contests too. I have knowledge on Data-Mining<br/>and Natural Language Processing which were a<br/>significant part of my Thesis resaearch.
 					</p>
 				</div>
 			</li>
@@ -342,26 +370,32 @@
 
 
 <!-- Education -->
-<div class="page-header" style="padding-top:5%">
-  <h1 class="text-center" style="color:black">EDUCATION</h1>
+<div class="page-header text-center" style="padding-top:0%; padding-bottom:0%" id="skill">
+  <!-- <h1 class="text-center" style="color:white">SKILLS</h1> -->
+  <img src="educationtitle.png" style="width:250px;"></img>
 </div> 
 
 <div class="parallax" id="education">
-<div class="container" style="padding-top:0%">
+<div class="container" style="padding-top:0%; padding-bottom:0%">
 	<div class="jumbotron" >
-		<h3 class="text-center" style="color:#ffea00"><b>Undergraduate (2014-2017)</b></h3>
+		<h3 class="text-center" style="color:#ffea00"><b>BSc in Computer Science and Engineering (2014-2017)</b></h3>
 		<p class="text-center" style="color:white">
-			Studying Computer Science and Engineering in <u>American International University-Bangladesh</u> (10th Semester).
+			American International University-Bangladesh(10th Semester)<br/>
+			Credits Completed: 128 + (16 running) = 144</br>
+			Current CGPA: 3.75
+			
 		</p>
 		
 		<h3 class="text-center" style="color:#ffea00"><b>Higher Secondary Certificate (2011-2013)</b></h3>
 		<p class="text-center" style="color:white">
-			Got GPA 5.0 (A+) on a scale of 5.0 from <u>Notre Dame College</u> in English version.
+			Notre Dame College (Science, English version)<br/>
+			GPA: 5.0 (A+) on a scale of 5.0
 		</p>
 		
 		<h3 class="text-center" style="color:#ffea00"><b>Secondary School Certificate (2009-2011)<b/></h3>
 		<p class="text-center" style="color:white">
-			Got GPA 5.0 (A+) on a scale of 5.0 from <u>Foundation School</u> in English version.
+			Foundation School (Science, English version)<br/>
+			GPA: 5.0 (A+) on a scale of 5.0
 		</p>
 	</div>
 </div>
@@ -369,11 +403,116 @@
 	
 	
 	
+<!-- Portfolio Section -->
+<div class="page-header text-center" style="padding-top:0%; padding-bottom: 0%" id="skill">
+  <!-- <h1 class="text-center" style="color:white">SKILLS</h1> -->
+  <img src="portfoliotitle.png" style="width:250px;"></img>
+</div> 
+
+<div class="row" id="portfolio">
+	<div class="container">
+		<ul class="list-inline">
+			<!-- <li class="col-md-1 col-sm-2 col-xs-2"></li> -->
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center" style="padding-top:5%">
+				<object width="420" height="315" data="https://www.youtube.com/v/9URjZptrftA&t"></object>
+				<p class="lead" style="color: white"><strong>Android Application (Cricket Score Computer)</strong></p>
+			</li>
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center" style="padding-top:5%">
+				<object width="420" height="315" data="https://www.youtube.com/v/_lXwhYHfoi4&t"></object>
+				<p class="lead" style="color: white"><strong>Android Application (MeetMath)</strong></p>
+			</li>
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center" style="padding-top:5%">
+				<object width="420" height="315" data="https://www.youtube.com/v/t5QA6AcQlbQ&t"></object>
+				<p class="lead" style="color: white"><strong>Android Application (Color Match)</strong></p>
+			</li>
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center" style="padding-top:5%">
+				<object width="420" height="315" data="https://www.youtube.com/v/IGGVLJrHYbw&t"></object>
+				<p class="lead" style="color: white"><strong>Game Developed using Unity3D Game Engine in C#<br/>(Jumping Taxi)</strong></p>
+			</li>
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+				<object width="420" height="315" data="https://www.youtube.com/v/WXHRBsLjrJ4"></object>
+				<p class="lead" style="color: white"><strong>Website Development using HTML, CSS, Php, Js and MySql<br/>(Freelance Bangladesh)</strong></p>
+			</li>
+			
+			<li class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+				<a href="https://www.fiverr.com/samialjabar" target="_blank"><img width="420" height="315" src="freelancer.png"></a>
+				<p class="lead" style="color: white"><strong>I work as a freelancer at Fiverr.com</strong></p>
+			</li>
+			
+			<!-- <li class="col-md-1 col-sm-2 col-xs-2"></li> -->
+		</ul>
+	</div>	
+</div>
+
+
+<!-- Other Works -->
+<div class="page-header text-center" style="padding-top:0%; padding-bottom: 0%" id="skill">
+  <!-- <h1 class="text-center" style="color:white">SKILLS</h1> -->
+  <img src="otherworkstitle.png" style="width:250px;"></img>
+</div> 
+
+
+<div class="parallax" id="other">
+<div class="container" style="padding-top:0%; padding-bottom:0%" id="otherworks">
+	<div class="jumbotron" >
+		<h3 class="text-center" style="color:#ffea00"><b>Training Commissioner at Esperer Dhaka<br/>Uptown - Esperer Bangladesh</b></h3>
+		<p class="text-center" style="color:white">
+			<a href="https://www.facebook.com/espererbangladesh/" target="_blank">Esperer Bangladesh</a>
+			
+		</p>
+		
+		<h3 class="text-center" style="color:#ffea00"><b>Volunteer Work</b></h3>
+		<p class="text-center" style="color:white">
+			1. <a href="https://www.facebook.com/events/1772128806400189/" target="_blank">Volunteer in AIUB Cyber Gaming Fest '16</a><br/>
+			2. <a href="https://www.facebook.com/events/693148947517618/" target="_blank">Volunteer in Open House Event of Media And Mass Communication<br/>Department AIUB.</a>
+		</p>
+		
+		<h3 class="text-center" style="color:#ffea00"><b>General Member in AIUB Computer Club<b/></h3>
+		<p class="text-center" style="color:white">
+			<a href="http://www.aiubcc.org/" target="_blank">AIUB Computer Club</a><br/>
+		</p>
+	</div>
+</div>
+</div>
+
+
 	
 <!-- Contact -->
-<div class="page-header" style="padding-top:2%">
-  <h1 class="text-center" style="color:black">CONTACT</h1>
+<div class="page-header text-center" style="padding-top:0%; padding-bottom: 0%" id="skill">
+  <!-- <h1 class="text-center" style="color:white">SKILLS</h1> -->
+  <img src="contacttitle.png" style="width:250px;"></img>
+</div> 
+
+<div class="container" style="background-color: white" id="contact">
+	<div class="list-inline" style="padding-top:5%; padding-bottom:5%;">
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+		</li>
+		<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+			<a href="https://www.facebook.com/sk.sami.aljabar" target="_blank"><img id="fbDark" width="70%" src="fb.png"  onmouseover="this.src='fbdark.png';" onmouseout="this.src='fb.png';"></img></a>
+		</li>
+		<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+			<a href="https://www.linkedin.com/in/sami-al-jabar-107416138/" target="_blank"><img id="linkedinDark" width="70%" src="linkedin.png" onmouseover="this.src='linkedindark.png';" onmouseout="this.src='linkedin.png';"></img></a>
+		</li>
+		<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+			<a href="https://twitter.com/sk_sami_aljabar" target="_blank"><img id="twitterDark" width="70%" src="twitter.png" onmouseover="this.src='twitterdark.png';" onmouseout="this.src='twitter.png';"></img></a>
+		</li>
+		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+		</li>
+		<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+			<h2 style="color:black; font-size:24px"><img width="6%" src="email.png"></img> sk.sami.aljabar@gmail.com</h2>
+		</li>
+		
+	</div>
+	</div>
 </div>
+
+
+
 
 
 
